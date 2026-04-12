@@ -124,7 +124,7 @@ http://127.0.0.1:5000/
 
 ### Execução via CLI
 
-Além da interface web, o projeto tembém pode ser executado via terminal.
+Além da interface web, o projeto também pode ser executado via terminal.
 
 ```bash
 python -m cli.main
