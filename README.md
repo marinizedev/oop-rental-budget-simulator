@@ -1,5 +1,11 @@
 # Orçamento de Aluguel — Simulador Web com Python
 
+![Python](https://img.shields.io/badge/Python-3.x-blue)
+![Flask](https://img.shields.io/badge/Flask-Web%20Framework-black)
+![Architecture](https://img.shields.io/badge/Architecture-OOP-orange)
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
+![License](https://img.shields.io/badge/License-MIT-green)
+
 Aplicação web desenvolvida em Python com foco em **orientação a objetos**, responsável por simular orçamentos de aluguel com base em regras de negócio reais de uma imobiliária.
 
 O sistema permite ao usuário escolher o tipo de imóvel, personalizar características e obter automaticamente o valor mensal, parcelas contratuais e custo anual, além de gerar um relatório em CSV.
