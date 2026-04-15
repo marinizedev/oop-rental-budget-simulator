@@ -19,8 +19,7 @@ gerar_csv(
     orcamento["aluguel"],
     orcamento["parcela_contrato"],
     orcamento["parcelas"],
-    tipo_imovel,
-    orcamento["total_anual"]
+    tipo_imovel
 
 )
 

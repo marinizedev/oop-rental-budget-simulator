@@ -16,7 +16,10 @@ class Estudio(Imovel):
         if self.vagas >= 2:
             valor += VALOR_ESTUDIO_2_VAGAS
 
-        if self.vagas > 2:
-            valor += (self.vagas - 2) * VALOR_ESTUDIO_VAGA_EXTRA
+            if self.vagas > 2:
+                valor += (self.vagas - 2) * VALOR_ESTUDIO_VAGA_EXTRA
 
+        elif self.vagas > 0:
+            valor += VALOR_ESTUDIO_2_VAGAS
+            
         return valor

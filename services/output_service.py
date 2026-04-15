@@ -11,5 +11,8 @@ def mostrar_resultado(orcamento):
     print("Parcela contrato:",
         formatar_real(orcamento["parcela_contrato"]))
     
+    print("Total mensal:",
+          formatar_real(orcamento["total_mensal"]))
+    
     print("Total anual:",
         formatar_real(orcamento["total_anual"]))

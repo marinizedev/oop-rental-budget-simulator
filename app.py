@@ -51,6 +51,8 @@ def calcular():
     orcamento_formatado = {
         "aluguel": formatar_real(orcamento["aluguel"]),
         "parcela_contrato": formatar_real(orcamento["parcela_contrato"]),
+        "parcelas": orcamento["parcelas"],
+        "total_mensal": formatar_real(orcamento["total_mensal"]),
         "total_anual": formatar_real(orcamento["total_anual"])
     }
     
@@ -58,11 +60,10 @@ def calcular():
         orcamento["aluguel"],
         orcamento["parcela_contrato"],
         orcamento["parcelas"],
-        tipo,
-        orcamento["total_anual"]
+        tipo
     )
 
     return render_template("index.html", orcamento=orcamento_formatado)
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)

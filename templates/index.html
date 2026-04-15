@@ -32,7 +32,7 @@
     <div id="campo_vaga">
         <label>Vaga de garagem:</label>
         <select name="vaga">
-            <option value="vaga">Não</option>
+            <option value="nao">Não</option>
             <option value="sim">Sim</option>
         </select>
     </div>
@@ -67,11 +67,12 @@
     {% if orcamento %}
 
     <div class="resultado">
-        <h2>Resultado</h2>
+        <h2>Resumo do Orçamento</h2>
 
-        <p>Aluguel: {{ orcamento["aluguel"] }}</p>
-        <p>Parcela contrato: {{ orcamento["parcela_contrato"] }}</p>
-        <p>Total anual: {{ orcamento["total_anual"] }}</p>
+        <p><strong>Valor do aluguel:</strong> {{ orcamento["aluguel"] }}</p>
+        <p><strong>Parcela do contrato:</strong> {{ orcamento["parcela_contrato"] }}(em {{ orcamento["parcelas"] }}x)</p>
+        <p><strong>Total mensal:</strong>{{ orcamento["total_mensal"] }}</p>
+        <p><strong>Total anual:</strong> {{ orcamento["total_anual"] }}</p>
         </div>
 
         {% endif %}

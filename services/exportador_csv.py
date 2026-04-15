@@ -1,7 +1,7 @@
 import csv
 
 
-def gerar_csv(valor_aluguel, parcela_contrato, qtd_parcelas, tipo_imovel, total_anual):
+def gerar_csv(valor_aluguel, parcela_contrato, qtd_parcelas, tipo_imovel):
 
     tipo_imovel = tipo_imovel.lower()
     nome_arquivo = f"orcamento_{tipo_imovel}.csv"
@@ -14,7 +14,7 @@ def gerar_csv(valor_aluguel, parcela_contrato, qtd_parcelas, tipo_imovel, total_
             "mes",
             "valor_aluguel",
             "parcela_contrato",
-            "total_anual"
+            "total_mensal"
         ])
 
         for mes in range(1, 13):
@@ -24,9 +24,11 @@ def gerar_csv(valor_aluguel, parcela_contrato, qtd_parcelas, tipo_imovel, total_
             else:
                 contrato = 0
 
+            total_mensal = valor_aluguel + contrato
+
             writer.writerow([
                 mes,
                 valor_aluguel,
                 contrato,
-                total_anual
+                total_mensal
             ])

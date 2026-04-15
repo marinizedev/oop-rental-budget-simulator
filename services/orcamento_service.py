@@ -10,10 +10,11 @@ class OrcamentoService:
         parcela_contrato = contrato.calcular_parcela()
 
         total_anual = valor_aluguel * 12
-    
+        total_mensal = valor_aluguel + parcela_contrato
         return {
             "aluguel": valor_aluguel,
             "parcela_contrato": parcela_contrato,
             "parcelas": parcelas,
-            "total_anual": total_anual
+            "total_anual": total_anual,
+            "total_mensal": total_mensal
             }
