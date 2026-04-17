@@ -8,11 +8,11 @@
 
 Aplicação web desenvolvida em Python com foco em **orientação a objetos**, responsável por simular orçamentos de aluguel com base em regras de negócio reais de uma imobiliária.
 
-O sistema permite ao usuário escolher o tipo de imóvel, personalizar características e obter automaticamente o valor mensal, parcelas contratuais e custo anual, além de gerar um relatório em CSV.
+O sistema permite ao usuário escolher o tipo de imóvel, personalizar características e obter automaticamente o valor do aluguel, parcelas contratuais, o total mensal do orçamento e o total anual, além de gerar um relatório em CSV.
 
 > Projeto desenvolvido como trabalho acadêmico da disciplina de Programação 
-> Orientada a Objetos (ADS — UniFECAF), expandido com interface web via Flask 
-> e comportamento dinâmico em JavaScript, indo além do escopo original exigido.
+> Orientada a Objetos (ADS — UniFECAF), expandido com interface web via Flask,
+> comportamento dinâmico em JavaScript e deploy em produção, indo além do escopo original proposto.
 
 ---
 
@@ -32,11 +32,15 @@ O sistema permite ao usuário escolher o tipo de imóvel, personalizar caracter�
     - Acréscimo por número de quartos
     - Inclusão de vaga de garagem
     - Desconto para apartamentos sem crianças
-    - Lógica específica para estúdios (vagas diferenciadas)
+    - Lógica específica para estúdios (pacote mínimo de vagas e adicionais)
 - Cálculo do contrato imobiliário parcelado (até 5x)
 - Geração de arquivo `.csv` com 12 meses de orçamento
 - Interface web com formulário dinâmico (UX inteligente)
-- Exibição de valores formatados em Real (R$)
+- Exibição de:
+    - Valor do aluguel
+    - Parcela do contrato
+    - Total mensal do orçamento
+    - Total anual
 - Execução alternativa via terminal (CLI)
 
 ---
@@ -103,7 +107,7 @@ oop-rental-budget-simulator/
 
 ### Como executar o projeto
 
-#### Opção 1 — Interaface web (local)
+#### Opção 1 — Interface web (local)
 
 1. Clonar o repositório
 
@@ -133,7 +137,7 @@ source venv/bin/activate
 3. Instalar dependências
 
 ```bash
-pip install flask
+pip install -r requirements.txt
 ```
 
 > **Nota:** o arquivo `requirements.txt` foi ajustado manualmente para 
@@ -163,9 +167,11 @@ python -m cli.main
 ### Exemplo de saída
 
 O sistema gera um arquivo `.csv` com:
-- 12 meses de aluguel
+
+- 12 meses de orçamento
 - Parcelas do contrato distribuídas corretamente
-- Total anual
+- Valor do aluguel mensal
+- Total mensal do orçamento
 
 ---
 
@@ -176,6 +182,7 @@ O sistema gera um arquivo `.csv` com:
 - Integração backend + frontend
 - Interface com comportamento dinâmico (UX)
 - Código estruturado com foco em escalabilidade
+- Cálculo do impacto mensal real (aluguel + contrato)
 - Duas formas de execução: web e CLI
 - Deploy em produção com acesso público
 
